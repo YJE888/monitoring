@@ -1,4 +1,4 @@
-#ClusterRole <-> ClusterRoleBinding <-> ServiceAccount(ns:monitoring)
+#ClusterRole(prometheus,ns:monitoring) <-> ClusterRoleBinding <-> ServiceAccount(ns:monitoring)
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
