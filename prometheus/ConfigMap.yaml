@@ -6,6 +6,7 @@ metadata:
     name: prometheus-server-conf
   namespace: monitoring
 data:
+#수집한 메트릭에 대해 알람조건 설정 -> 조건에 충족하게 되면 Alert manager로 알람 보내기 가능
   prometheus.rules: |-
     groups:
     - name: container memory alert
@@ -28,6 +29,7 @@ data:
           severity: fatal
         annotations:
           summary: High Cpu Usage
+  #수집할 메트릭의 종류와 수집 주기 기입
   prometheus.yml: |-
     global:
       scrape_interval: 5s
